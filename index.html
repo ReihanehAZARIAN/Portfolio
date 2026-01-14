@@ -1,111 +1,111 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Reihaneh Azarian — Portfolio</title>
-<meta name="description" content="Set Designer & Scenography Portfolio">
-
-<link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reihaneh Azarian — Portfolio</title>
+  <meta name="description" content="Portfolio — Set Design / Scenography" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+  <header class="header" id="top">
+    <div class="header__inner">
+      <div class="brand">
+        <!-- Replace with your logo if you want -->
+        <!-- <img src="./assets/logo.svg" class="brand__logo" alt="Logo" /> -->
 
-<header class="header">
-  <div class="header__inner">
-    <div class="brand">
-      <span class="brand__name">REIHANEH AZARIAN</span>
-      <span class="brand__role">Set Designer · Scenography</span>
-    </div>
-
-    <nav class="nav">
-      <a href="#work">Portfolio</a>
-      <a href="#contact">Contact</a>
-      <a class="nav__cta" href="./assets/portfolio.pdf" target="_blank">Open PDF</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero__media"></div>
-  <div class="hero__overlay">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Selected Work</p>
-      <h1 class="hero__title">Scenography & Spatial Design</h1>
-      <p class="hero__sub">
-        A curated selection of immersive environments, event architecture and visual storytelling.
-      </p>
-
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#work">View portfolio</a>
-        <a class="btn btn--ghost" href="./assets/portfolio.pdf" target="_blank">Download PDF</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="work" class="section">
-  <div class="section__head">
-    <h2 class="section__title">Portfolio</h2>
-    <p class="section__desc">Scroll the document below or open it in a new tab.</p>
-  </div>
-
-  <div class="pdf">
-    <div class="pdf__toolbar">
-      <button id="zoomOut" class="tool">−</button>
-      <span class="tool__label"><span id="zoomLabel">100%</span></span>
-      <button id="zoomIn" class="tool">+</button>
-
-      <span class="tool__sep"></span>
-
-      <a class="tool tool--link" href="./assets/portfolio.pdf" target="_blank">Open PDF</a>
-      <a class="tool tool--link" href="./assets/portfolio.pdf" download>Download</a>
-    </div>
-
-    <div id="pdfViewer" class="pdf__viewer">
-      <div id="pdfLoading" class="pdf__loading">
-        <div class="spinner"></div>
-        <p>Loading portfolio…</p>
+        <div class="brand__name">REIHANEH AZARIAN</div>
+        <div class="brand__role">Set Designer · Scenography</div>
       </div>
 
-      <div id="pdfError" class="pdf__error" hidden>
-        <p>Couldn’t load the PDF here.</p>
-        <p><a class="inlineLink" href="./assets/portfolio.pdf" target="_blank">Open in a new tab</a></p>
+      <nav class="nav">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+        <a class="nav__cta" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Selected work</p>
+        <h1 class="hero__title">A minimal portfolio, designed to let the work speak.</h1>
+        <p class="hero__sub">Spatial storytelling · Event scenography · 3D</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#portfolio">View portfolio</a>
+          <a class="btn btn--ghost" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
+
+        <p class="hero__note">PDF is ~50MB — best viewed on Wi-Fi / desktop.</p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="contact" class="section section--contact">
-  <div class="section__head">
-    <h2 class="section__title">Contact</h2>
-    <p class="section__desc">Available for freelance scenography & spatial design.</p>
-  </div>
+    <section class="section" id="portfolio">
+      <div class="section__head">
+        <h2 class="section__title">Portfolio</h2>
+        <p class="section__desc">
+          If the embedded viewer doesn’t work on your device, use
+          <a class="inlineLink" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>.
+        </p>
+      </div>
 
-  <div class="contactCard">
-    <div class="contactCard__row">
-      <span class="label">Email</span>
-      <a class="value" href="mailto:contact@reihanehazarian.fr">contact@reihanehazarian.fr</a>
-    </div>
-    <div class="contactCard__row">
-      <span class="label">Location</span>
-      <span class="value">Paris, France</span>
-    </div>
-    <div class="contactCard__row">
-      <span class="label">LinkedIn</span>
-      <a class="value" href="https://www.linkedin.com/in/reihaneh-azarian/?locale=en_US" target="_blank">View profile</a>
-    </div>
-  </div>
+      <div class="pdf">
+        <div class="pdf__toolbar">
+          <a class="tool tool--link" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>
+          <a class="tool tool--link" href="./assets/portfolio.pdf" download>Download</a>
+        </div>
 
-  <footer class="footer">
-    © <span id="year"></span> Reihaneh Azarian
-  </footer>
-</section>
+        <!-- OPTION 1 (recommended): EMBED -->
+        <embed
+          class="pdf__viewer"
+          src="./assets/portfolio.pdf"
+          type="application/pdf"
+        />
 
-<!-- IMPORTANT: PDF.js must be loaded BEFORE script.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js"></script>
-<script src="./script.js"></script>
+        <!-- OPTION 2 (alternative): IFRAME -->
+        <!--
+        <iframe
+          class="pdf__viewer"
+          src="./assets/portfolio.pdf"
+          title="Portfolio PDF"
+        ></iframe>
+        -->
+      </div>
+    </section>
 
+    <section class="section section--contact" id="contact">
+      <div class="section__head">
+        <h2 class="section__title">Contact</h2>
+        <p class="section__desc">Available for freelance scenography, spatial design & 3D.</p>
+      </div>
+
+      <div class="contactCard">
+        <div class="contactRow">
+          <span class="label">Email</span>
+          <a class="value" href="mailto:contact@reihanehazarian.fr">contact@reihanehazarian.fr</a>
+        </div>
+        <div class="contactRow">
+          <span class="label">Location</span>
+          <span class="value">Paris, France</span>
+        </div>
+        <div class="contactRow">
+          <span class="label">LinkedIn</span>
+          <a class="value" href="https://www.linkedin.com/in/reihaneh-azarian/?locale=en_US" target="_blank" rel="noopener">
+            linkedin.com/in/reihaneh-azarian
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span>© Reihaneh Azarian</span>
+        <span class="dot">·</span>
+        <a href="#top">Back to top</a>
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
