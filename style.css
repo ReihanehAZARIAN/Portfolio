@@ -206,7 +206,8 @@ a:hover{ opacity:.85; }
 }
 .pdf__viewer{
   width: 100%;
-  height: min(82vh, 980px);
+  height: calc(100vh - 120px); /* almost full screen */
+  min-height: 900px;         /* keeps it big on large screens */
   border: 0;
   background: #f7f7f8;
 }
