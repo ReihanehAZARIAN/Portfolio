@@ -2,7 +2,7 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // ---- PDF.js setup
-const PDF_URL = "./assets/portfolio.pdf";
+const PDF_URL = "/Portfolio/assets/portfolio.pdf";
 
 let pdfDoc = null;
 let currentScale = 1.0; // 1.0 = 100%
