@@ -12,7 +12,7 @@
   <header class="header" id="top">
     <div class="header__inner">
       <div class="brand">
-        <!-- Replace with your logo if you want -->
+        <!-- Optional logo -->
         <!-- <img src="./assets/logo.svg" class="brand__logo" alt="Logo" /> -->
 
         <div class="brand__name">REIHANEH AZARIAN</div>
@@ -28,6 +28,7 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="hero__media" aria-hidden="true"></div>
       <div class="hero__content">
@@ -35,21 +36,24 @@
         <h1 class="hero__title">A minimal portfolio, designed to let the work speak.</h1>
         <p class="hero__sub">Spatial storytelling · Event scenography · 3D</p>
 
+        <!-- Buttons hidden for now (kept here if you want later) -->
+        <!--
         <div class="hero__actions">
           <a class="btn btn--primary" href="#portfolio">View portfolio</a>
           <a class="btn btn--ghost" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open in new tab</a>
         </div>
+        -->
 
         <p class="hero__note">PDF is ~50MB — best viewed on Wi-Fi / desktop.</p>
       </div>
     </section>
 
+    <!-- PORTFOLIO -->
     <section class="section" id="portfolio">
       <div class="section__head">
         <h2 class="section__title">Portfolio</h2>
         <p class="section__desc">
-          If the embedded viewer doesn’t work on your device, use
-          <a class="inlineLink" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>.
+          Desktop: scroll the embedded PDF. Mobile: tap “Open PDF”.
         </p>
       </div>
 
@@ -59,23 +63,26 @@
           <a class="tool tool--link" href="./assets/portfolio.pdf" download>Download</a>
         </div>
 
-        <!-- OPTION 1 (recommended): EMBED -->
-		<embed
-		  class="pdf__viewer"
-		  src="./assets/portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0"
-		  type="application/pdf"
-		/>
-        <!-- OPTION 2 (alternative): IFRAME -->
-        <!--
-        <iframe
-          class="pdf__viewer"
-          src="./assets/portfolio.pdf"
-          title="Portfolio PDF"
-        ></iframe>
-        -->
+        <!-- Desktop / large screens PDF embed -->
+        <embed
+          class="pdf__viewer pdf__viewer--desktop"
+          src="./assets/portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          type="application/pdf"
+        />
+
+        <!-- Mobile fallback (reliable for iOS/Android) -->
+        <div class="pdf__mobile">
+          <p class="pdf__mobileText">
+            Your device may not support embedded PDFs. Use the button below:
+          </p>
+          <a class="btnMobile" href="./assets/portfolio.pdf" target="_blank" rel="noopener">
+            Open Portfolio PDF
+          </a>
+        </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="section section--contact" id="contact">
       <div class="section__head">
         <h2 class="section__title">Contact</h2>
@@ -87,10 +94,17 @@
           <span class="label">Email</span>
           <a class="value" href="mailto:contact@reihanehazarian.fr">contact@reihanehazarian.fr</a>
         </div>
+
+        <div class="contactRow">
+          <span class="label">Phone</span>
+          <a class="value" href="tel:+33656738621">+33 6 56 73 86 21</a>
+        </div>
+
         <div class="contactRow">
           <span class="label">Location</span>
           <span class="value">Paris, France</span>
         </div>
+
         <div class="contactRow">
           <span class="label">LinkedIn</span>
           <a class="value" href="https://www.linkedin.com/in/reihaneh-azarian/?locale=en_US" target="_blank" rel="noopener">
