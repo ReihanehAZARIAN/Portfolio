@@ -35,7 +35,7 @@
         <h1 class="hero__title">A minimal portfolio, designed to let the work speak.</h1>
         <p class="hero__sub">Spatial storytelling · Event scenography · 3D</p>
 
-        <!-- Buttons hidden for now (kept here if you want later) -->
+        <!-- Buttons hidden for now (kept if you want later) -->
         <!--
         <div class="hero__actions">
           <a class="btn btn--primary" href="#portfolio">View portfolio</a>
@@ -47,37 +47,31 @@
       </div>
     </section>
 
-    <!-- PORTFOLIO (FULL WIDTH SECTION) -->
-    <section id="portfolio" class="section section--full">
-      <div class="section__head section__head--full">
-        <h2 class="section__title">Portfolio</h2>
-        <p class="section__desc">
-          Desktop: scroll the embedded PDF. Mobile: tap “Open PDF” (always works).
-        </p>
+    <!-- PORTFOLIO (EDGE-TO-EDGE) -->
+    <section id="portfolio" class="portfolio">
+      <div class="portfolio__head">
+        <h2 class="portfolio__title">Portfolio</h2>
+        <div class="portfolio__actions">
+          <a class="chip" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>
+          <a class="chip" href="./assets/portfolio.pdf" download>Download</a>
+        </div>
       </div>
 
-      <div class="pdf pdf--full">
-        <div class="pdf__toolbar">
-          <a class="tool tool--link" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>
-          <a class="tool tool--link" href="./assets/portfolio.pdf" download>Download</a>
-        </div>
+      <!-- Desktop PDF (big) -->
+      <embed
+        class="pdf__viewer"
+        src="./assets/portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+        type="application/pdf"
+      />
 
-        <!-- Desktop / tablet embed (big) -->
-        <embed
-          class="pdf__viewer"
-          src="./assets/portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
-          type="application/pdf"
-        />
-
-        <!-- Mobile fallback (reliable) -->
-        <div class="pdf__mobile">
-          <p class="pdf__mobileText">
-            Embedded PDFs often don’t work on mobile browsers. Use the button below:
-          </p>
-          <a class="btnMobile" href="./assets/portfolio.pdf" target="_blank" rel="noopener">
-            Open Portfolio PDF
-          </a>
-        </div>
+      <!-- Mobile fallback (always works) -->
+      <div class="pdf__mobile">
+        <p class="pdf__mobileText">
+          Embedded PDFs often don’t work on mobile browsers. Tap below:
+        </p>
+        <a class="btnMobile" href="./assets/portfolio.pdf" target="_blank" rel="noopener">
+          Open Portfolio PDF
+        </a>
       </div>
     </section>
 
