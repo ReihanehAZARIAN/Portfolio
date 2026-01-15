@@ -3,17 +3,20 @@
   --ink: #0b0c10;
   --muted: #6b7280;
 
-  /* lighter lines */
   --line: rgba(11,12,16,.10);
   --lineSoft: rgba(11,12,16,.08);
 
-  /* small touch of blue */
   --accent: #2b6cff;
 
   --radius: 18px;
+
+  /* page max width for text sections */
   --max: 1120px;
 
-  /* background behind PDF to soften page separators */
+  /* FULL WIDTH portfolio container */
+  --wide: 1440px;
+
+  /* background behind PDF */
   --pdfBg: #f6f6f7;
 }
 
@@ -126,7 +129,7 @@ a:hover{ opacity:.86; }
   color: rgba(255,255,255,.75);
 }
 
-/* SECTIONS */
+/* SECTION BASE */
 .section{
   max-width: var(--max);
   margin: 0 auto;
@@ -155,15 +158,31 @@ a:hover{ opacity:.86; }
   line-height: 1.6;
 }
 
-/* PDF BLOCK */
+/* FULL WIDTH SECTION for portfolio */
+.section--full{
+  max-width: none;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.section__head--full{
+  max-width: var(--wide);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PDF BLOCK (FULL WIDTH) */
+.pdf--full{
+  max-width: var(--wide);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pdf{
   border: 1px solid var(--lineSoft);
   border-radius: var(--radius);
   overflow:hidden;
   background: var(--pdfBg);
 }
-
-/* toolbar stays minimal (thin light grey) */
 .pdf__toolbar{
   display:flex;
   gap:10px;
@@ -171,7 +190,6 @@ a:hover{ opacity:.86; }
   border-bottom: 1px solid var(--lineSoft);
   background: rgba(255,255,255,.65);
 }
-
 .tool{
   border: 1px solid var(--lineSoft);
   background: #fff;
@@ -185,25 +203,18 @@ a:hover{ opacity:.86; }
   box-shadow: 0 0 0 4px rgba(43,108,255,.08);
 }
 
-/* BIG viewer */
+/* MAKE PDF REALLY BIG */
 .pdf__viewer{
   width: 100%;
   border: 0;
   background: var(--pdfBg);
+
+  /* key: large height */
+  height: calc(100vh - 110px);
+  min-height: 1200px;
 }
 
-/* desktop: near full viewport height */
-.pdf__viewer--desktop{
-  height: calc(100vh - 150px);
-  min-height: 1050px;
-}
-
-/* This helps “hide” heavy black separators by matching backgrounds */
-embed, iframe{
-  background: var(--pdfBg);
-}
-
-/* MOBILE fallback */
+/* Mobile fallback */
 .pdf__mobile{
   display:none;
   padding: 22px 18px;
@@ -220,7 +231,7 @@ embed, iframe{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 12px 14px;
+  padding: 13px 16px;
   border-radius: 999px;
   border: 1px solid rgba(43,108,255,.30);
   background: rgba(43,108,255,.08);
@@ -232,7 +243,6 @@ embed, iframe{
 }
 
 /* CONTACT */
-.section--contact{ padding-top: 18px; }
 .contactCard{
   border: 1px solid var(--lineSoft);
   border-radius: var(--radius);
@@ -277,9 +287,9 @@ embed, iframe{
   .hero__content{ padding-top: 96px; }
 }
 
-/* IMPORTANT: On mobile, embedded PDFs are unreliable (especially iOS Safari)
-   So we hide the embed and show a clean button. */
+/* IMPORTANT MOBILE FIX:
+   hide the embed entirely (iOS Safari often fails) */
 @media (max-width: 820px){
-  .pdf__viewer--desktop{ display:none; }
+  .pdf__viewer{ display:none; }
   .pdf__mobile{ display:block; }
 }
