@@ -9,10 +9,11 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="header" id="top">
     <div class="header__inner">
       <div class="brand">
-        <!-- Optional logo -->
+        <!-- Optional logo (if you add one later) -->
         <!-- <img src="./assets/logo.svg" class="brand__logo" alt="Logo" /> -->
 
         <div class="brand__name">REIHANEH AZARIAN</div>
@@ -31,6 +32,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero__media" aria-hidden="true"></div>
+
       <div class="hero__content">
         <p class="hero__eyebrow">Selected work</p>
         <h1 class="hero__title">A minimal portfolio, designed to let the work speak.</h1>
@@ -63,17 +65,18 @@
           <a class="tool tool--link" href="./assets/portfolio.pdf" download>Download</a>
         </div>
 
-        <!-- Desktop / large screens PDF embed -->
+        <!-- BIG Desktop PDF viewer -->
+        <!-- FitH makes the PDF fit the horizontal width (bigger pages) -->
         <embed
           class="pdf__viewer pdf__viewer--desktop"
-          src="./assets/portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          src="./assets/portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
           type="application/pdf"
         />
 
         <!-- Mobile fallback (reliable for iOS/Android) -->
         <div class="pdf__mobile">
           <p class="pdf__mobileText">
-            Your device may not support embedded PDFs. Use the button below:
+            Embedded PDFs don’t always work on mobile. Use the button below:
           </p>
           <a class="btnMobile" href="./assets/portfolio.pdf" target="_blank" rel="noopener">
             Open Portfolio PDF
