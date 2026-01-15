@@ -13,9 +13,6 @@
   <header class="header" id="top">
     <div class="header__inner">
       <div class="brand">
-        <!-- Optional logo (if you add one later) -->
-        <!-- <img src="./assets/logo.svg" class="brand__logo" alt="Logo" /> -->
-
         <div class="brand__name">REIHANEH AZARIAN</div>
         <div class="brand__role">Set Designer · Scenography</div>
       </div>
@@ -50,33 +47,32 @@
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section class="section" id="portfolio">
-      <div class="section__head">
+    <!-- PORTFOLIO (FULL WIDTH SECTION) -->
+    <section id="portfolio" class="section section--full">
+      <div class="section__head section__head--full">
         <h2 class="section__title">Portfolio</h2>
         <p class="section__desc">
-          Desktop: scroll the embedded PDF. Mobile: tap “Open PDF”.
+          Desktop: scroll the embedded PDF. Mobile: tap “Open PDF” (always works).
         </p>
       </div>
 
-      <div class="pdf">
+      <div class="pdf pdf--full">
         <div class="pdf__toolbar">
           <a class="tool tool--link" href="./assets/portfolio.pdf" target="_blank" rel="noopener">Open PDF</a>
           <a class="tool tool--link" href="./assets/portfolio.pdf" download>Download</a>
         </div>
 
-        <!-- BIG Desktop PDF viewer -->
-        <!-- FitH makes the PDF fit the horizontal width (bigger pages) -->
+        <!-- Desktop / tablet embed (big) -->
         <embed
-          class="pdf__viewer pdf__viewer--desktop"
+          class="pdf__viewer"
           src="./assets/portfolio.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
           type="application/pdf"
         />
 
-        <!-- Mobile fallback (reliable for iOS/Android) -->
+        <!-- Mobile fallback (reliable) -->
         <div class="pdf__mobile">
           <p class="pdf__mobileText">
-            Embedded PDFs don’t always work on mobile. Use the button below:
+            Embedded PDFs often don’t work on mobile browsers. Use the button below:
           </p>
           <a class="btnMobile" href="./assets/portfolio.pdf" target="_blank" rel="noopener">
             Open Portfolio PDF
@@ -86,7 +82,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section section--contact" id="contact">
+    <section class="section" id="contact">
       <div class="section__head">
         <h2 class="section__title">Contact</h2>
         <p class="section__desc">Available for freelance scenography, spatial design & 3D.</p>
