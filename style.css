@@ -71,3 +71,23 @@
 /* Phone and tablet refinements. */
 @media(max-width:800px){.topbar nav a,.topbar nav a[aria-current=page]{min-height:44px}.featured-controls button{min-width:44px;min-height:44px}.filters button{min-height:44px}.bio-layout{min-width:0}}
 @media(max-width:520px){.topbar{margin:0 12px}.topbar nav{width:100%;justify-content:space-between;gap:6px;font-size:10px;letter-spacing:0}.hero-deck{width:90%;height:clamp(190px,58vw,236px)}.hero-card{width:38%;left:0}.hero-card:nth-child(2){left:21%}.hero-card:nth-child(3){left:42%}.hero-card:nth-child(4){left:63%}.work{padding-top:40px}.graphics-section,.motion-section{padding-left:20px;padding-right:20px}.bio-layout{padding:0 22px}.bio-content h1{font-size:24px}.contact{padding:40px 20px}.dialog-top{padding:12px 14px}.close-dialog{min-height:44px}footer{line-height:1.6}}
+
+/* Larger opening images, with closer overlap to stay inside small screens. */
+.hero-card{width:40%;left:1%}
+.hero-card:nth-child(2){left:20%}
+.hero-card:nth-child(3){left:39%}
+.hero-card:nth-child(4){left:58%}
+.hero-deck{height:370px}
+@media(max-width:800px){.hero-deck{height:clamp(265px,48vw,368px)}}
+@media(max-width:520px){.hero-card{width:47.5%;left:0}.hero-card:nth-child(2){left:17%}.hero-card:nth-child(3){left:34%}.hero-card:nth-child(4){left:51%}.hero-deck{height:clamp(215px,65vw,280px)}}
+/* Spread the opening cards while preserving their large-screen image size. */
+@media(min-width:801px){.hero-deck{max-width:866px}.hero-card{width:33.3333%;left:0}.hero-card:nth-child(2){left:22%}.hero-card:nth-child(3){left:44%}.hero-card:nth-child(4){left:66%}}
+@media(min-width:521px) and (max-width:800px){.hero-card{width:40%;left:-4%}.hero-card:nth-child(2){left:18.5%}.hero-card:nth-child(3){left:41%}.hero-card:nth-child(4){left:63.5%}.hero-deck{width:90%}}
+@media(max-width:520px){.hero-deck{width:100%}.hero-card{width:42.75%;left:0}.hero-card:nth-child(2){left:19%}.hero-card:nth-child(3){left:38%}.hero-card:nth-child(4){left:57%}}
+/* Lighter typography for headings only. */
+.intro h1,.hero-role,.section-heading h2,.card-caption h3,.graphic-project h3,.motion-work h3,.dialog-intro h2,.bio-content h1,.bio-services h2{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-weight:300;letter-spacing:-.025em;line-height:1.15}
+.section-heading h2{font-size:clamp(32px,4.3vw,56px)}
+.card-caption h3,.graphic-project h3,.motion-work h3{font-size:25px;line-height:1.2}
+@media(max-width:520px){.section-heading h2{font-size:32px}.card-caption h3,.graphic-project h3,.motion-work h3{font-size:22px}}
+/* Bold introduction, retaining light section headings. */
+.intro h1,.intro .hero-role{font-weight:700}

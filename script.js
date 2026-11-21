@@ -105,6 +105,9 @@ document.querySelectorAll('.motion-media video').forEach(video=>{
  video.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')start()});
  video.addEventListener('pointerleave',e=>{if(e.pointerType!=='touch')video.pause()});
  video.addEventListener('focus',start);video.addEventListener('blur',()=>video.pause());
+ // Touch users can toggle playback directly without a player toolbar.
+ video.addEventListener('pointerup',event=>{if(event.pointerType==='touch'){if(video.paused)start();else video.pause();}});
+ video.addEventListener('keydown',event=>{if(event.key===' '||event.key==='Enter'){event.preventDefault();if(video.paused)start();else video.pause();}});
 });
 document.querySelectorAll('.motion-gif').forEach(button=>{
  const img=button.querySelector('img');
