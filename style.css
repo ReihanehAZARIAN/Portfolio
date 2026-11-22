@@ -56,7 +56,7 @@
 
 /* Compact portrait and carousel controls beside the images. */
 .bio-portrait{max-width:270px;aspect-ratio:1;object-position:center 35%;filter:grayscale(100%) contrast(1.2);justify-self:center}
-.featured-viewport{position:relative}.featured-controls{position:absolute;top:257px;left:50%;transform:translate(-50%,-50%);width:min(650px,96%);margin:0;justify-content:space-between;pointer-events:none;z-index:2}.featured-controls button{pointer-events:auto;box-shadow:0 3px 14px #00000012}
+.featured-viewport{position:relative}.featured-controls{position:absolute;top:280px;left:50%;transform:translate(-50%,-50%);width:min(650px,96%);margin:0;justify-content:space-between;pointer-events:none;z-index:2}.featured-controls button{pointer-events:auto;box-shadow:0 3px 14px #00000012}
 @media(max-width:650px){.featured-controls{top:calc(32px + 36vw);width:96%}.featured-controls button{width:40px;height:40px}.bio-portrait{max-width:240px}}
 
 /* Original motion files, presented without cropping. */
@@ -91,3 +91,13 @@
 @media(max-width:520px){.section-heading h2{font-size:32px}.card-caption h3,.graphic-project h3,.motion-work h3{font-size:22px}}
 /* Bold introduction, retaining light section headings. */
 .intro h1,.intro .hero-role{font-weight:700}
+
+/* Consistent bold section headings and a readable services heading. */
+.section-heading h2{font-weight:700}
+.bio-services h2{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:18px;letter-spacing:0;line-height:1.4;color:#858585}
+
+/* Frame the Chanel bar directly from the high-resolution portfolio page. */
+.hero-card.hero-chanel img,.hero-card.hero-chanel:hover img{position:absolute;width:287.08%;height:143.54%;max-width:none;left:-48.09%;top:-21.77%;object-fit:fill;transform:none}
+
+/* Center the navigation glyphs within their circular buttons. */
+.featured-controls button{display:grid;place-items:center;padding:0;line-height:1}
